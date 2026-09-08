@@ -1,0 +1,552 @@
+/* ======================================
+   ABOUT HERO
+====================================== */
+
+.about-hero {
+    min-height: 400px;
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #f5f8ff;
+}
+
+.about-hero-content {
+    max-width: 750px;
+
+    animation: aboutFadeUp 0.8s ease-out;
+}
+
+.about-hero h1 {
+    font-size: clamp(42px, 5vw, 62px);
+    line-height: 1.1;
+
+    margin: 10px 0 20px;
+}
+
+.about-hero h1 span {
+    color: var(--primary);
+
+    display: inline-block;
+
+    animation: aboutFadeUp 0.8s ease-out 0.2s both;
+}
+
+.about-hero p {
+    max-width: 650px;
+    margin: auto;
+
+    color: var(--text);
+    font-size: 17px;
+
+    animation: aboutFadeUp 0.8s ease-out 0.4s both;
+}
+
+
+/* ======================================
+   ABOUT STORY
+====================================== */
+
+.about-story {
+    padding: 90px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* Story Image */
+
+.about-image {
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    animation: aboutFadeLeft 0.8s ease-out;
+}
+
+.about-image img {
+    width: 100%;
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* Image zoom */
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Story Content */
+
+.about-story-content {
+    animation: aboutFadeRight 0.8s ease-out;
+}
+
+.about-story-content h2 {
+    font-size: 42px;
+    line-height: 1.15;
+
+    margin: 10px 0 20px;
+}
+
+.about-story-content h2 span {
+    color: var(--primary);
+}
+
+.about-story-content p {
+    color: var(--text);
+
+    font-size: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ======================================
+   MISSION SECTION
+====================================== */
+
+.mission-section {
+    padding: 90px 7%;
+
+    background: #f5f8ff;
+}
+
+.mission-grid {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Mission Card */
+
+.mission-card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    border: 1px solid var(--border);
+
+    animation: aboutFadeUp 0.7s ease-out both;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Mission card hover */
+
+.mission-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Staggered animation */
+
+.mission-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.mission-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.mission-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.mission-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+
+/* ======================================
+   MISSION ICON
+====================================== */
+
+.mission-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #edf4ff;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* Icon hover */
+
+.mission-card:hover .mission-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+
+/* Mission Text */
+
+.mission-card h3 {
+    margin-bottom: 10px;
+}
+
+.mission-card p {
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+
+/* ======================================
+   ABOUT BENEFITS
+====================================== */
+
+.about-benefits {
+    padding: 90px 7%;
+
+    animation: aboutFadeUp 0.8s ease-out;
+}
+
+
+/* ======================================
+   ABOUT STATS
+====================================== */
+
+.about-stats {
+    padding: 55px 7%;
+
+    background: var(--primary);
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    text-align: center;
+
+    animation: aboutFadeUp 0.8s ease-out;
+}
+
+.stat {
+    display: flex;
+
+    flex-direction: column;
+
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-6px);
+}
+
+.stat strong {
+    font-size: 34px;
+
+    transition: transform 0.3s ease;
+}
+
+.stat:hover strong {
+    transform: scale(1.08);
+}
+
+.stat span {
+    font-size: 13px;
+
+    opacity: 0.9;
+}
+
+
+/* ======================================
+   ABOUT ANIMATIONS
+====================================== */
+
+@keyframes aboutFadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes aboutFadeLeft {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes aboutFadeRight {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+
+
+/* ======================================
+   ABOUT DARK MODE
+====================================== */
+
+body.dark .about-hero,
+body.dark .mission-section {
+    background: #101522;
+}
+
+body.dark .about-story-content p,
+body.dark .mission-card p {
+    color: #aab4c5;
+}
+
+body.dark .mission-card {
+    background: #171e2d;
+
+    border-color: #30394b;
+}
+
+body.dark .mission-icon {
+    background: #202a3d;
+}
+
+
+/* ======================================
+   ABOUT RESPONSIVE
+====================================== */
+
+@media (max-width: 900px) {
+
+    /* Story */
+
+    .about-story {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    /* Mission */
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Stats */
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Mobile-style animations */
+
+    .about-image {
+        animation: aboutFadeUp 0.8s ease-out;
+    }
+
+    .about-story-content {
+        animation: aboutFadeUp 0.8s ease-out;
+    }
+}
+
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 600px) {
+
+    /* Hero */
+
+    .about-hero {
+        min-height: 350px;
+
+        padding: 60px 5%;
+    }
+
+    .about-hero h1 {
+        font-size: 42px;
+    }
+
+    .about-hero p {
+        font-size: 15px;
+    }
+
+
+    /* Story */
+
+    .about-story {
+        padding: 65px 5%;
+
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 320px;
+    }
+
+    .about-story-content h2 {
+        font-size: 34px;
+    }
+
+
+    /* Mission */
+
+    .mission-section {
+        padding: 65px 5%;
+    }
+
+    .mission-card {
+        padding: 25px;
+    }
+
+
+    /* Benefits */
+
+    .about-benefits {
+        padding: 65px 5%;
+    }
+
+
+    /* Stats */
+
+    .about-stats {
+        padding: 45px 5%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px 15px;
+    }
+
+    .stat strong {
+        font-size: 27px;
+    }
+
+    .stat span {
+        font-size: 12px;
+    }
+}
+
+.benefits-grid .benefit{
+    border-radius: 10px;
+  
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+/* ======================================
+   EXTRA SMALL DEVICES
+====================================== */
+
+@media (max-width: 400px) {
+
+    .about-hero {
+        padding: 50px 5%;
+    }
+
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .about-story-content h2 {
+        font-size: 30px;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .mission-card {
+        padding: 20px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ======================================
+   REDUCED MOTION
+====================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}

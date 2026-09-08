@@ -1,0 +1,1216 @@
+/* ===============================
+   RESET
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #172033;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ===============================
+   VARIABLES
+================================ */
+
+:root {
+    --primary: #1769ff;
+    --primary-dark: #0954d9;
+    --dark: #172033;
+    --text: #667085;
+    --light: #f5f8ff;
+    --border: #e5eaf2;
+    --white: #ffffff;
+}
+
+
+/* ===============================
+   NAVBAR
+================================ */
+
+.navbar {
+    height: 76px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--white);
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span,
+.footer-logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #5f6b7a;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.theme-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+.theme-icon{
+    width: 30px;
+    height:30px;
+}
+.login-btn {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.book-btn {
+    background: var(--primary);
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.book-btn:hover,
+.primary-btn:hover {
+    background: var(--primary-dark);
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* ===============================
+   HERO
+================================ */
+
+.hero {
+    min-height: 620px;
+
+    padding: 80px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    background: #f5f8ff;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-heading {
+    display: inline-block;
+
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 68px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--primary);
+}
+
+.hero p {
+    color: var(--text);
+
+    font-size: 17px;
+
+    max-width: 520px;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.secondary-btn {
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--dark);
+}
+
+.secondary-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.hero-trust {
+    display: flex;
+
+    gap: 35px;
+
+    margin-top: 45px;
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.trust-item strong {
+    font-size: 23px;
+}
+
+.trust-item span {
+    font-size: 12px;
+    color: var(--text);
+}
+
+
+/* ===============================
+   HERO IMAGE
+================================ */
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 470px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    display: block;
+}
+
+.experience-card,
+.floating-card {
+    position: absolute;
+
+    bottom: 25px;
+    left: -25px;
+
+    background: white;
+
+    padding: 18px 22px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-card strong {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.experience-card span {
+    font-size: 12px;
+    color: var(--text);
+}
+
+
+/* ===============================
+   SECTION
+================================ */
+
+.section {
+    padding: 90px 7%;
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto 50px;
+}
+
+.section-heading span,
+.booking-header span,
+.cta-section span {
+    color: var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.section-heading h2,
+.booking-header h2 {
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin: 10px 0 15px;
+}
+
+.section-heading p {
+    color: var(--text);
+}
+
+
+/* ===============================
+   SERVICE CARDS
+================================ */
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.service-icon {
+    width: 200px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf4ff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+     overflow: hidden; 
+}
+.service-icon img {
+    width: 250px;
+    height:100px;
+    border-radius:12px ;
+    transition: transform 0.3s ease-in-out;
+}
+.service-icon:hover img{
+    transform: scale(1.2);
+    
+}
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--text);
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* ===============================
+   WHY SECTION
+================================ */
+
+.why-section {
+    padding: 80px 7%;
+
+    background: #f5f8ff;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.4fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.why-content h2 {
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    margin: 10px 0 20px;
+}
+
+.why-content h2 span {
+    color: var(--primary);
+}
+
+.why-content p {
+    color: var(--text);
+}
+
+.benefits-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.benefit {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+}
+
+.benefit > div {
+    font-size: 22px;
+background: rgb(208, 226, 252);
+width:fit-content;
+
+padding: 8px;
+
+border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+.benefit p {
+    color: var(--text);
+
+    font-size: 13px;
+}
+
+
+/* ===============================
+   CTA
+================================ */
+
+.cta-section {
+    margin: 70px 7%;
+
+    padding: 50px;
+
+    border-radius: 18px;
+
+    background: var(--primary);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.cta-section span {
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    margin-top: 10px;
+}
+
+.cta-section p {
+    margin-top: 10px;
+
+    opacity: 0.9;
+}
+
+.cta-section .primary-btn {
+    background: white;
+
+    color: var(--primary);
+
+    white-space: nowrap;
+}
+
+
+/* ===============================
+   HOME 2
+================================ */
+
+.hero-two {
+    background: white;
+}
+
+.hero-two .hero-image {
+    order: 1;
+}
+
+.hero-two .hero-content {
+    order: 2;
+}
+
+.floating-card {
+    left: auto;
+    right: -20px;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.floating-card img {
+     width: 40px;
+    height: 40px;
+
+}
+
+.floating-card strong {
+    display: block;
+}
+
+.floating-card small {
+    color: var(--text);
+}
+
+
+/* ===============================
+   BOOKING SECTION
+================================ */
+
+.booking-section {
+    padding: 90px 7%;
+
+    background: #f5f8ff;
+}
+
+.booking-header {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.booking-grid {
+    display: grid;
+align-items: center;
+justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.booking-card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    border: 1px solid var(--border);
+
+    transition: 0.3s;
+}
+
+.booking-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.big-icon {
+    
+    display: block;
+border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+     height: 150px;
+}
+.big-icon img{
+    border-radius: 10px;
+    transition: 1s transform ease-in-out;
+    border-radius: 10px;
+}
+.big-icon:hover img{
+    transform: scale(1.3);
+    
+}
+
+.booking-card h3 {
+    margin-bottom: 10px;
+}
+
+.booking-card p {
+    color: var(--text);
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.booking-card button {
+    border: none;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* ===============================
+   PROCESS
+================================ */
+
+.process-section {
+    padding: 90px 7%;
+}
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.process-card {
+    padding: 25px;
+
+    border-top: 3px solid var(--primary);
+}
+
+.process-number {
+    color: var(--primary);
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+.process-card p {
+    color: var(--text);
+
+    font-size: 14px;
+
+    margin-top: 8px;
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+    padding: 40px 7%;
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 23px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: var(--text);
+
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+
+/* ===============================
+   DARK MODE
+================================ */
+
+body.dark {
+    background: #101522;
+
+    color: #ffffff;
+}
+
+body.dark .navbar,
+body.dark .secondary-btn,
+body.dark .service-card,
+body.dark .booking-card,
+body.dark .benefit,
+body.dark footer {
+    background: #171e2d;
+}
+
+body.dark .hero,
+body.dark .why-section,
+body.dark .booking-section {
+    background: #101522;
+}
+
+body.dark .nav-links a,
+body.dark .hero p,
+body.dark .section-heading p,
+body.dark .service-card p,
+body.dark .booking-card p,
+body.dark .process-card p,
+body.dark .why-content p,
+body.dark footer p {
+    color: #aab4c5;
+}
+
+body.dark .secondary-btn {
+    color: white;
+
+    border-color: #30394b;
+}
+
+body.dark .experience-card,
+body.dark .floating-card {
+    background: #171e2d;
+}
+
+body.dark .border,
+body.dark .service-card,
+body.dark .booking-card {
+    border-color: #30394b;
+}
+
+
+/* ======================================
+   ANIMATIONS
+====================================== */
+
+/* Fade + slide up */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Fade in from left */
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Fade in from right */
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ======================================
+   HERO ANIMATION
+====================================== */
+
+.hero-content {
+    animation: fadeLeft 0.8s ease-out;
+}
+
+.hero-image {
+    animation: fadeRight 0.8s ease-out;
+}
+
+.experience-card {
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* ======================================
+   SECTION ANIMATION
+====================================== */
+
+.section-heading {
+    animation: fadeUp 0.8s ease-out;
+}
+
+
+/* ======================================
+   SERVICE CARDS
+====================================== */
+
+.service-card {
+    animation: fadeUp 0.8s ease-out;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Different animation delays */
+
+.service-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+
+/* ======================================
+   SERVICE ICON
+====================================== */
+
+.service-icon {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+
+/* ======================================
+   BENEFITS
+====================================== */
+
+.benefit {
+    animation: fadeUp 0.8s ease-out;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-6px);
+}
+
+
+/* ======================================
+   BUTTON HOVER
+====================================== */
+
+.primary-btn,
+.secondary-btn,
+.book-btn,
+.login-btn {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.primary-btn:hover,
+.book-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.secondary-btn:hover,
+.login-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ======================================
+   NAVBAR
+====================================== */
+
+.nav-links a {
+    position: relative;
+}
+
+
+/* Animated underline */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 2px;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* ======================================
+   THEME BUTTON
+====================================== */
+
+.theme-btn {
+    transition:
+        transform 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+
+/* ======================================
+   CTA
+====================================== */
+
+.cta-section {
+    animation: fadeUp 0.8s ease-out;
+}
+
+
+/* ======================================
+   LOGO
+====================================== */
+
+.logo,
+.footer-logo {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover,
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+
+/* ======================================
+   REDUCED MOTION
+====================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+
+
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .login-btn,
+    .book-btn {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 60px;
+    }
+
+    .hero-image {
+        order: 2;
+    }
+
+    .hero-two .hero-image {
+        order: 2;
+    }
+
+    .hero-two .hero-content {
+        order: 1;
+    }
+
+    .service-grid,
+    .booking-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .why-section {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+
+        padding: 20px 5%;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    body.dark .nav-links {
+        background: #171e2d;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .experience-card {
+        left: 15px;
+    }
+
+    .floating-card {
+        right: 15px;
+        height:100px;
+    }
+    .floating-card img{
+        width: 30px;
+        height:30px;
+    }
+
+    .hero-trust {
+        gap: 20px;
+    }
+
+    .section,
+    .booking-section,
+    .process-section {
+        padding: 65px 5%;
+    }
+
+    .section-heading h2,
+    .booking-header h2 {
+        font-size: 30px;
+    }
+
+    .service-grid,
+    .booking-grid,
+    .benefits-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-section {
+        padding: 65px 5%;
+    }
+
+    .why-content h2 {
+        font-size: 34px;
+    }
+
+    .cta-section {
+        margin: 50px 5%;
+
+        padding: 35px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .cta-section h2 {
+        font-size: 27px;
+    }
+}
