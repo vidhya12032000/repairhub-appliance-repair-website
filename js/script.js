@@ -46,7 +46,7 @@ if (themeBtn) {
             // Dark mode
             localStorage.setItem("theme", "dark");
             if (themeIcon) {
-                themeIcon.src = `${basePath}assets/icons/contrast.png`;
+                themeIcon.src = `${basePath}assets/icons/contrast.png` ;
             }
         } else {
             // Light mode
