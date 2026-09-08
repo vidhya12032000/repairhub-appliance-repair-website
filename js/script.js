@@ -21,20 +21,28 @@ const themeIcon = document.getElementById("themeIcon");
 
 const savedTheme = localStorage.getItem("theme");
 
-// Determine correct path for assets depending on page location
-const isInHtmlFolder = window.location.pathname.includes("/html/");
-const basePath = isInHtmlFolder ? "../" : "./";
+// Safe icon path loader with auto-fallback
+function setThemeIcon(iconName) {
+    if (!themeIcon) return;
+
+    const primaryPath = `assets/icons/${iconName}`;
+    const fallbackPath = `../assets/icons/${iconName}`;
+
+    themeIcon.src = primaryPath;
+
+    // Switch to relative parent directory if path fails to resolve
+    themeIcon.onerror = () => {
+        themeIcon.src = fallbackPath;
+        themeIcon.onerror = null; // Prevent looping if both fail
+    };
+}
 
 // Apply saved theme when page loads
 if (savedTheme === "dark") {
     document.body.classList.add("dark");
-    if (themeIcon) {
-        themeIcon.src = `${basePath}assets/icons/contrast.png`;
-    }
+    setThemeIcon("contrast.png");
 } else {
-    if (themeIcon) {
-        themeIcon.src = `${basePath}assets/icons/moon.png`;
-    }
+    setThemeIcon("moon.png");
 }
 
 // Toggle theme
@@ -43,17 +51,11 @@ if (themeBtn) {
         document.body.classList.toggle("dark");
 
         if (document.body.classList.contains("dark")) {
-            // Dark mode
             localStorage.setItem("theme", "dark");
-            if (themeIcon) {
-                themeIcon.src = `${basePath}assets/icons/contrast.png` ;
-            }
+            setThemeIcon("contrast.png");
         } else {
-            // Light mode
             localStorage.setItem("theme", "light");
-            if (themeIcon) {
-                themeIcon.src = `${basePath}assets/icons/moon.png`;
-            }
+            setThemeIcon("moon.png");
         }
     });
 }

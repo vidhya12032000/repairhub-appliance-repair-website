@@ -225,15 +225,19 @@
 
 body.dark .contact-hero {
     background: #111827;
+    color:var(--white);
 }
 
 body.dark .contact-info-card {
     background: #1f2937;
     border-color: #374151;
+    color:white;
 }
+
 
 body.dark .contact-form-section {
     background: #111827;
+    
 }
 
 body.dark .contact-form-box {
@@ -245,7 +249,7 @@ body.dark .form-group select,
 body.dark .form-group textarea {
     background: #111827;
     border-color: #374151;
-    color: #ffffff;
+   color:var(--white);
 }
 
 body.dark .contact-icon {
