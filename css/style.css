@@ -795,7 +795,7 @@ border-radius: 10px;
 
 footer {
     padding: 40px 7%;
-
+/* background-color: #171e2d; */
     border-top: 1px solid var(--border);
 
     text-align: center;
