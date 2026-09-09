@@ -8,6 +8,7 @@
 ===================================================== */
 
 .services-hero {
+    position: relative;
     min-height: 420px;
     padding: 80px 7%;
 
@@ -18,8 +19,21 @@
     text-align: center;
 
     background: #f5f8ff;
-
+background: url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jpg") right / cover no-repeat;
     overflow: hidden;
+}
+/* Black shade on top of image */
+.services-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* Content above black shade */
+.services-hero > * {
+    position: relative;
+    z-index: 1;
 }
 
 .services-hero-content {
@@ -47,8 +61,8 @@ justify-content: center;
 
     margin: 0 auto;
 
-    color: var(--text);
-
+    /* color: var(--text); */
+color: var(--white);
     font-size: 16px;
     line-height: 1.7;
 }
@@ -281,8 +295,8 @@ margin: 10px;
 
 .service-benefits {
     padding: 90px 7%;
-
-    background: #f5f8ff;
+background: url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jpg") bottom / cover no-repeat;
+    /* background: #f5f8ff; */
 }
 
 .service-benefits .section-heading {
@@ -493,7 +507,7 @@ margin: 10px;
 
 body.dark .services-hero,
 body.dark .service-benefits {
-    background: #101522;
+    background: url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jpg") right / cover no-repeat;
 }
 
 body.dark .service-large-card,

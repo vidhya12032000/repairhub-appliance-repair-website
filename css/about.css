@@ -11,8 +11,8 @@
     justify-content: center;
 
     text-align: center;
-
-    background: #f5f8ff;
+background: url(../assets/images/aboutImage.jpg) top/cover;
+    /* background: #f5f8ff; */
 }
 
 .about-hero-content {
@@ -40,7 +40,7 @@
     max-width: 650px;
     margin: auto;
 
-    color: var(--text);
+    color: var(--white);
     font-size: 17px;
 
     animation: aboutFadeUp 0.8s ease-out 0.4s both;
