@@ -62,6 +62,61 @@ if (themeBtn) {
 
 
 // ======================================
+// RTL / LTR TOGGLE
+// ======================================
+
+const rtlBtn = document.getElementById("rtlBtn");
+
+
+// Get saved direction
+const savedDirection = localStorage.getItem("direction");
+
+
+// Apply saved direction
+if (savedDirection) {
+    document.documentElement.dir = savedDirection;
+}
+
+
+// Update button text
+function updateRTLButton() {
+
+    if (document.documentElement.dir === "rtl") {
+        rtlBtn.textContent = "LTR";
+    } else {
+        rtlBtn.textContent = "RTL";
+    }
+}
+
+
+// RTL button click
+rtlBtn.addEventListener("click", () => {
+
+    if (document.documentElement.dir === "rtl") {
+
+        // Change RTL → LTR
+        document.documentElement.dir = "ltr";
+
+        localStorage.setItem("direction", "ltr");
+
+    } else {
+
+        // Change LTR → RTL
+        document.documentElement.dir = "rtl";
+
+        localStorage.setItem("direction", "rtl");
+    }
+
+    updateRTLButton();
+});
+
+
+// Initial button state
+updateRTLButton();
+
+
+
+// ======================================
 // CLOSE MOBILE MENU
 // ======================================
 

@@ -112,6 +112,82 @@ button {
     width: 30px;
     height:30px;
 }
+
+/* ======================================
+   RTL BUTTON
+====================================== */
+
+.rtl-btn {
+    border: none;
+    padding: 9px 14px;
+    border-radius: 25px;
+    background: #198fed;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.rtl-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+/* ======================================
+   RTL MODE
+====================================== */
+
+html[dir="rtl"] {
+    direction: rtl;
+}
+
+html[dir="rtl"] body {
+    direction: rtl;
+}
+
+
+/* Text alignment */
+
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .section-heading,
+html[dir="rtl"] .why-content {
+    text-align: right;
+}
+
+
+/* Hero */
+
+html[dir="rtl"] .hero {
+    direction: rtl;
+}
+
+
+/* Service cards */
+
+html[dir="rtl"] .service-card {
+    direction: rtl;
+    text-align: right;
+}
+
+
+/* Benefits */
+
+html[dir="rtl"] .benefit {
+    direction: rtl;
+    text-align: right;
+}
+
+
+/* CTA */
+
+html[dir="rtl"] .cta-section {
+    direction: rtl;
+}
+
+
+
 .login-btn {
     font-size: 14px;
     font-weight: 600;
