@@ -9,6 +9,7 @@
     padding: 100px 20px;
     background: var(--light);
     text-align: center;
+    background: url(../assets/images/front-view-male-builder-uniform-with-tool-box-blue-wall.jpg) left/cover;
 }
 
 .contact-hero h1 {
@@ -247,7 +248,7 @@
 ===================================================== */
 
 body.dark .contact-hero {
-    background: #111827;
+   background: url(../assets/images/front-view-male-builder-uniform-with-tool-box-blue-wall.jpg) left/cover;
     color:var(--white);
 }
 
@@ -257,12 +258,21 @@ body.dark .contact-info-card {
     color:white;
 }
 
+body.dark .contact-info-card h3{
+    color: var(--white);
+}
 
 body.dark .contact-form-section {
     background: #111827;
     
 }
+body.dark .contact-form-section h2{
+    color: #fff;
+}
 
+body.dark .contact-points div{
+    color:white;
+}
 body.dark .contact-form-box {
     background: #1f2937;
 }
@@ -274,7 +284,9 @@ body.dark .form-group textarea {
     border-color: #374151;
    color:var(--white);
 }
-
+body.dark .form-group label{
+    color: var(--white);
+}
 body.dark .contact-icon {
     background: #263554;
 }
@@ -283,7 +295,9 @@ body.dark .service-area-box {
     background: #1f2937;
 }
 
-
+body.dark .service-area-box h2 {
+    color: var(--white);
+}
 
 
 /* =====================================================

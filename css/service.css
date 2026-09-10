@@ -242,7 +242,7 @@ color: var(--white);
 }
 
 .service-card-content li::before {
-    content: "✓";
+    content: "";
 
     position: absolute;
 
