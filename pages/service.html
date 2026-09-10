@@ -9,25 +9,52 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>RepairHub | Services</title>
-     <link rel="icon" href="../assets/icons/settings.png">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="icon" href="../assets/icons/settings.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+          integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Services CSS -->
     <link rel="stylesheet" href="../css/service.css">
 
 </head>
 
+
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
     <header class="navbar">
 
-        <div class="logo" style="display: flex; align-items: center;justify-content: center; gap:10px">
-            <img src="../assets/icons/settings.png" width="40" height="40">
-              <a href="index.html" class="logo">
+        <!-- Logo -->
+
+        <div class="logo"
+             style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+
+            <img src="../assets/icons/settings.png"
+                 width="40"
+                 height="40"
+                 alt="RepairHub Logo">
+
+            <a href="../index.html" class="logo">
                 Repair<span>Hub</span>
             </a>
+
         </div>
+
+
+        <!-- Navigation -->
 
         <nav class="nav-links" id="navLinks">
 
@@ -57,33 +84,63 @@
 
         </nav>
 
+
+        <!-- Navigation Actions -->
+
         <div class="nav-actions">
 
-          <button class="theme-btn" id="themeBtn">
-    <img
-        class="theme-icon"
-        id="themeIcon"
-        src="../assets/icons/moon.png"
-        alt="Change theme"
-    >
-</button>
+            <!-- Theme Button -->
 
- <!-- RTL / LTR Button -->
-    <button class="rtl-btn" id="rtlBtn">
-        RTL
-    </button>
+            <button class="theme-btn"
+                    id="themeBtn"
+                    aria-label="Change theme">
+
+                <img
+                    class="theme-icon"
+                    id="themeIcon"
+                    src="../assets/icons/moon-svgrepo-com.svg"
+                    alt="Change theme">
+
+            </button>
 
 
-            <a href="#" class="login-btn">
+            <!-- RTL / LTR Button -->
+
+            <button class="rtl-btn"
+                    id="rtlBtn">
+
+                RTL
+
+            </button>
+
+
+            <!-- Login -->
+
+            <a href="#"
+               class="login-btn">
+
                 Login
+
             </a>
 
-            <a href="#" class="book-btn">
+
+            <!-- Book Repair -->
+
+            <a href="#"
+               class="book-btn">
+
                 Book Repair
+
             </a>
 
-            <button class="menu-btn" id="menuBtn">
+
+            <!-- Mobile Menu -->
+
+            <button class="menu-btn"
+                    id="menuBtn">
+
                 ☰
+
             </button>
 
         </div>
@@ -91,12 +148,17 @@
     </header>
 
 
-    <!-- ================= MAIN ================= -->
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
 
     <main>
 
 
-        <!-- ================= SERVICES HERO ================= -->
+        <!-- =====================================================
+             SERVICES HERO
+        ====================================================== -->
 
         <section class="services-hero">
 
@@ -117,15 +179,22 @@
                     repair services at your doorstep.
                 </p>
 
+
                 <div class="hero-buttons">
 
-                    <a href="#" class="primary-btn">
+                    <a href="#"
+                       class="primary-btn">
+
                         Book a Repair →
+
                     </a>
+
 
                     <a href="#service-list"
                        class="secondary-btn">
+
                         Explore Services
+
                     </a>
 
                 </div>
@@ -135,14 +204,98 @@
         </section>
 
 
-        <!-- ================= SERVICE CATEGORIES ================= -->
+
+        <!-- =====================================================
+             SERVICE STATISTICS
+        ====================================================== -->
+
+        <section class="service-stats">
+
+            <div class="stats-container">
+
+
+                <div class="stat-item">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h3>
+                        5,000+
+                    </h3>
+
+                    <p>
+                        Happy Customers
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-item">
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    <h3>
+                        8,500+
+                    </h3>
+
+                    <p>
+                        Repairs Completed
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-item">
+
+                    <i class="fa-solid fa-user-gear"></i>
+
+                    <h3>
+                        50+
+                    </h3>
+
+                    <p>
+                        Skilled Technicians
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-item">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <h3>
+                        4.8/5
+                    </h3>
+
+                    <p>
+                        Customer Rating
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SERVICE CATEGORIES
+        ====================================================== -->
 
         <section class="service-categories"
                  id="service-list">
 
+
             <div class="section-heading">
 
-                <span>WHAT WE REPAIR</span>
+                <span>
+                    WHAT WE REPAIR
+                </span>
 
                 <h2>
                     Appliance Repair Services
@@ -156,17 +309,22 @@
             </div>
 
 
+
             <div class="service-large-grid">
 
 
-                <!-- AC -->
+                <!-- ================= AC ================= -->
 
                 <div class="service-large-card">
 
+
                     <div class="service-large-icon">
-                        <!-- <i class="fa-regular fa-snowflake" style="color: rgb(25, 143, 237);"></i> -->
-                         <img src="../assets/images/AcRepair.jpg">
+
+                        <img src="../assets/images/AcRepair.jpg"
+                             alt="AC Repair">
+
                     </div>
+
 
                     <div class="service-card-content">
 
@@ -184,28 +342,37 @@
                             major brands.
                         </p>
 
+
                         <ul>
 
                             <li>
-                                <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> AC not cooling
+                                <i class="fa-regular fa-calendar-check"></i>
+                                AC not cooling
                             </li>
 
                             <li>
-                                <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Gas refill
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Gas refill
                             </li>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Water leakage
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Water leakage
                             </li>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> AC installation
+                                <i class="fa-regular fa-calendar-check"></i>
+                                AC installation
                             </li>
 
                         </ul>
 
-                        <a href="#" class="service-link">
+
+                        <a href="#"
+                           class="service-link">
+
                             Book AC Repair →
+
                         </a>
 
                     </div>
@@ -213,14 +380,19 @@
                 </div>
 
 
-                <!-- Refrigerator -->
+
+                <!-- ================= REFRIGERATOR ================= -->
 
                 <div class="service-large-card">
 
+
                     <div class="service-large-icon">
-                        <!-- <i class="fa-solid fa-temperature-low" style="color: rgb(25, 143, 237);"></i> -->
-                          <img src="../assets/images/fridgeRepair.jpg">
+
+                        <img src="../assets/images/fridgeRepair.jpg"
+                             alt="Refrigerator Repair">
+
                     </div>
+
 
                     <div class="service-card-content">
 
@@ -238,28 +410,37 @@
                             problems.
                         </p>
 
+
                         <ul>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Cooling problems
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Cooling problems
                             </li>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Compressor issues
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Compressor issues
                             </li>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Water leakage
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Water leakage
                             </li>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Unusual noise
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Unusual noise
                             </li>
 
                         </ul>
 
-                        <a href="#" class="service-link">
+
+                        <a href="#"
+                           class="service-link">
+
                             Book Refrigerator Repair →
+
                         </a>
 
                     </div>
@@ -267,14 +448,19 @@
                 </div>
 
 
-                <!-- Washing Machine -->
+
+                <!-- ================= WASHING MACHINE ================= -->
 
                 <div class="service-large-card">
 
+
                     <div class="service-large-icon">
-                        <!-- <i class="fa-solid fa-basket-shopping" style="color: rgb(25, 143, 237);"></i> -->
-                          <img src="../assets/images/washing.jpg">
+
+                        <img src="../assets/images/washing.jpg"
+                             alt="Washing Machine Repair">
+
                     </div>
+
 
                     <div class="service-card-content">
 
@@ -292,28 +478,37 @@
                             semi-automatic machines.
                         </p>
 
+
                         <ul>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Machine not starting
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Machine not starting
                             </li>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Drainage problems
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Drainage problems
                             </li>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Spinning issues
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Spinning issues
                             </li>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Excessive vibration
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Excessive vibration
                             </li>
 
                         </ul>
 
-                        <a href="#" class="service-link">
+
+                        <a href="#"
+                           class="service-link">
+
                             Book Washing Machine Repair →
+
                         </a>
 
                     </div>
@@ -321,14 +516,19 @@
                 </div>
 
 
-                <!-- General Appliance -->
+
+                <!-- ================= GENERAL APPLIANCE ================= -->
 
                 <div class="service-large-card">
 
+
                     <div class="service-large-icon">
-                       <img src="../assets/icons/tool.png">
-                        <!-- <i class="fa-solid fa-screwdriver-wrench" style="color: rgb(25, 143, 237);"></i> -->
+
+                        <img src="../assets/icons/tool.png"
+                             alt="General Appliance Service">
+
                     </div>
+
 
                     <div class="service-card-content">
 
@@ -346,46 +546,311 @@
                             appliances.
                         </p>
 
+
                         <ul>
 
                             <li>
-                                  <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i>Appliance inspection
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Appliance inspection
                             </li>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Preventive maintenance
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Preventive maintenance
                             </li>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> Parts replacement
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Parts replacement
                             </li>
 
                             <li>
-                                 <i class="fa-regular fa-calendar-check" style="color: rgb(25, 143, 237);"></i> General troubleshooting
+                                <i class="fa-regular fa-calendar-check"></i>
+                                General troubleshooting
                             </li>
 
                         </ul>
 
-                        <a href="#" class="service-link">
+
+                        <a href="#"
+                           class="service-link">
+
                             Request Service →
+
                         </a>
 
                     </div>
 
                 </div>
 
+
             </div>
 
         </section>
 
 
-        <!-- ================= WHY OUR SERVICE ================= -->
 
-        <section class="service-benefits">
+        <!-- =====================================================
+             COMPLETE APPLIANCE CARE
+        ====================================================== -->
+
+        <section class="service-coverage">
+
 
             <div class="section-heading">
 
-                <span>WHY OUR SERVICES</span>
+                <span>
+                    COMPLETE APPLIANCE CARE
+                </span>
+
+                <h2>
+                    Everything Your Appliance Needs
+                </h2>
+
+                <p>
+                    From quick repairs to regular maintenance,
+                    RepairHub provides complete appliance care
+                    at your doorstep.
+                </p>
+
+            </div>
+
+
+
+            <div class="coverage-grid">
+
+
+                <div class="coverage-card">
+
+                    <div class="coverage-icon">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                    <h3>
+                        Inspection & Diagnosis
+                    </h3>
+
+                    <p>
+                        Our technicians carefully inspect your
+                        appliance to identify the exact problem
+                        before starting the repair.
+                    </p>
+
+                </div>
+
+
+
+                <div class="coverage-card">
+
+                    <div class="coverage-icon">
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    </div>
+
+                    <h3>
+                        Repair & Replacement
+                    </h3>
+
+                    <p>
+                        We repair faulty components and replace
+                        damaged parts when necessary using
+                        suitable replacement parts.
+                    </p>
+
+                </div>
+
+
+
+                <div class="coverage-card">
+
+                    <div class="coverage-icon">
+
+                        <i class="fa-solid fa-broom"></i>
+
+                    </div>
+
+                    <h3>
+                        Cleaning & Maintenance
+                    </h3>
+
+                    <p>
+                        Regular cleaning and preventive maintenance
+                        can improve appliance performance and
+                        help reduce unexpected breakdowns.
+                    </p>
+
+                </div>
+
+
+
+                <div class="coverage-card">
+
+                    <div class="coverage-icon">
+
+                        <i class="fa-solid fa-house"></i>
+
+                    </div>
+
+                    <h3>
+                        Doorstep Service
+                    </h3>
+
+                    <p>
+                        Get convenient appliance repair services
+                        at your home without the need to transport
+                        heavy appliances.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             COMMON PROBLEMS
+        ====================================================== -->
+
+        <section class="common-problems">
+
+
+            <div class="section-heading">
+
+                <span>
+                    COMMON ISSUES
+                </span>
+
+                <h2>
+                    Having Appliance Problems?
+                </h2>
+
+                <p>
+                    Here are some common problems our technicians
+                    can help you solve.
+                </p>
+
+            </div>
+
+
+
+            <div class="problem-grid">
+
+
+                <!-- AC Problem -->
+
+                <div class="problem-card">
+
+                    <i class="fa-solid fa-snowflake"></i>
+
+                    <h3>
+                        AC Not Cooling
+                    </h3>
+
+                    <p>
+                        Weak cooling, poor airflow or unusual
+                        sounds from your air conditioner.
+                    </p>
+
+                    <a href="#">
+                        Get AC Help →
+                    </a>
+
+                </div>
+
+
+
+                <!-- Refrigerator Problem -->
+
+                <div class="problem-card">
+
+                    <i class="fa-solid fa-temperature-low"></i>
+
+                    <h3>
+                        Refrigerator Not Cooling
+                    </h3>
+
+                    <p>
+                        Refrigerator not cooling properly,
+                        excessive frost or unusual noises.
+                    </p>
+
+                    <a href="#">
+                        Get Refrigerator Help →
+                    </a>
+
+                </div>
+
+
+
+                <!-- Washing Machine Problem -->
+
+                <div class="problem-card">
+
+                    <i class="fa-solid fa-shirt"></i>
+
+                    <h3>
+                        Washing Machine Issues
+                    </h3>
+
+                    <p>
+                        Drainage problems, spinning issues,
+                        vibration or machine startup problems.
+                    </p>
+
+                    <a href="#">
+                        Get Washing Machine Help →
+                    </a>
+
+                </div>
+
+
+
+                <!-- Electrical Problem -->
+
+                <div class="problem-card">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    <h3>
+                        Electrical Problems
+                    </h3>
+
+                    <p>
+                        Appliances not turning on, power issues
+                        or unexpected shutdowns.
+                    </p>
+
+                    <a href="#">
+                        Request Inspection →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             WHY OUR SERVICE
+        ====================================================== -->
+
+        <section class="service-benefits">
+
+
+            <div class="section-heading">
+
+                <span>
+                    WHY OUR SERVICES
+                </span>
 
                 <h2>
                     Service Designed Around You
@@ -394,13 +859,14 @@
             </div>
 
 
+
             <div class="benefits-grid">
 
 
                 <div class="benefit">
 
                     <div>
-                        <i class="fa-solid fa-user-check" style="color: rgb(25, 143, 237);"></i>
+                        <i class="fa-solid fa-user-check"></i>
                     </div>
 
                     <h3>
@@ -415,10 +881,11 @@
                 </div>
 
 
+
                 <div class="benefit">
 
                     <div>
-                        <i class="fa-solid fa-truck-fast" style="color: rgb(25, 143, 237);"></i>
+                        <i class="fa-solid fa-truck-fast"></i>
                     </div>
 
                     <h3>
@@ -433,10 +900,11 @@
                 </div>
 
 
+
                 <div class="benefit">
 
                     <div>
-                        <i class="fa-solid fa-indian-rupee-sign" style="color: rgb(25, 143, 237);"></i>
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
                     </div>
 
                     <h3>
@@ -451,10 +919,11 @@
                 </div>
 
 
+
                 <div class="benefit">
 
                     <div>
-                        <i class="fa-solid fa-shield" style="color: rgb(25, 143, 237);"></i>
+                        <i class="fa-solid fa-shield"></i>
                     </div>
 
                     <h3>
@@ -468,18 +937,154 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
 
-        <!-- ================= HOW IT WORKS ================= -->
+
+        <!-- =====================================================
+             WHY CHOOSE REPAIRHUB
+        ====================================================== -->
+
+        <section class="why-repairhub">
+
+
+            <div class="why-content">
+
+                <span>
+                    WHY REPAIRHUB?
+                </span>
+
+                <h2>
+                    Repair Service You Can Trust
+                </h2>
+
+                <p>
+                    We make appliance repair simple, transparent
+                    and convenient. From booking to completion,
+                    our goal is to provide a smooth service
+                    experience.
+                </p>
+
+
+                <div class="why-list">
+
+
+                    <div class="why-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <h3>
+                                Experienced Technicians
+                            </h3>
+
+                            <p>
+                                Skilled professionals trained to
+                                handle different appliance problems.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="why-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <h3>
+                                Convenient Booking
+                            </h3>
+
+                            <p>
+                                Book a service request and choose
+                                a convenient time for your visit.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="why-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <h3>
+                                Clear Communication
+                            </h3>
+
+                            <p>
+                                Stay informed about your service
+                                request and technician visit.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="why-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <h3>
+                                Customer-Focused Support
+                            </h3>
+
+                            <p>
+                                Our support team is available to
+                                help throughout your service journey.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="why-image">
+
+                <img
+                    src="../assets/images/technician.jpg"
+                    alt="RepairHub technician">
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             HOW IT WORKS
+        ====================================================== -->
 
         <section class="service-process">
 
+
             <div class="section-heading">
 
-                <span>SIMPLE PROCESS</span>
+                <span>
+                    SIMPLE PROCESS
+                </span>
 
                 <h2>
                     How Our Service Works
@@ -491,6 +1096,7 @@
                 </p>
 
             </div>
+
 
 
             <div class="process-grid">
@@ -514,6 +1120,7 @@
                 </div>
 
 
+
                 <div class="process-card">
 
                     <div class="process-number">
@@ -530,6 +1137,7 @@
                     </p>
 
                 </div>
+
 
 
                 <div class="process-card">
@@ -550,6 +1158,7 @@
                 </div>
 
 
+
                 <div class="process-card">
 
                     <div class="process-number">
@@ -567,18 +1176,372 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
 
-        <!-- ================= CTA ================= -->
+
+        <!-- =====================================================
+             SERVICE GUARANTEE
+        ====================================================== -->
+
+        <section class="service-guarantee">
+
+
+            <div class="guarantee-content">
+
+
+                <div class="guarantee-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        SERVICE PROMISE
+                    </span>
+
+                    <h2>
+                        We Care About Every Repair
+                    </h2>
+
+                    <p>
+                        We believe a good repair service is more
+                        than simply fixing an appliance. We focus
+                        on reliable solutions, clear communication
+                        and a better customer experience.
+                    </p>
+
+                </div>
+
+
+                <a href="#"
+                   class="primary-btn">
+
+                    Book a Repair →
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CUSTOMER REVIEWS
+        ====================================================== -->
+
+        <section class="service-reviews">
+
+
+            <div class="section-heading">
+
+                <span>
+                    CUSTOMER REVIEWS
+                </span>
+
+                <h2>
+                    What Our Customers Say
+                </h2>
+
+                <p>
+                    See why customers choose RepairHub for
+                    their appliance service needs.
+                </p>
+
+            </div>
+
+
+
+            <div class="reviews-grid">
+
+
+                <!-- Review 1 -->
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+                        <img src="../assets/icons/stars.png" width="100" height="100">
+                    </div>
+
+                    <p>
+                        "The technician arrived on time and
+                        quickly identified the issue with my AC.
+                        The service was smooth and professional."
+                    </p>
+
+
+                    <div class="review-user">
+
+                        <div class="user-avatar">
+                            AK
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Arun Kumar
+                            </h4>
+
+                            <span>
+                                AC Service
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Review 2 -->
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+                        <img src="../assets/icons/stars.png" width="100" height="100">
+                    </div>
+
+                    <p>
+                        "My refrigerator had stopped cooling.
+                        The technician explained the problem
+                        clearly and completed the repair."
+                    </p>
+
+
+                    <div class="review-user">
+
+                        <div class="user-avatar">
+                            PS
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Priya S
+                            </h4>
+
+                            <span>
+                                Refrigerator Repair
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Review 3 -->
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+                       <img src="../assets/icons/stars.png" width="100" height="100">
+                    </div>
+
+                    <p>
+                        "Booking the service was very easy.
+                        The technician was professional and
+                        my washing machine is working perfectly."
+                    </p>
+
+
+                    <div class="review-user">
+
+                        <div class="user-avatar">
+                            RM
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Ravi M
+                            </h4>
+
+                            <span>
+                                Washing Machine Repair
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FAQ
+        ====================================================== -->
+
+        <section class="service-faq">
+
+
+            <div class="section-heading">
+
+                <span>
+                    FAQ
+                </span>
+
+                <h2>
+                    Frequently Asked Questions
+                </h2>
+
+                <p>
+                    Find answers to some common questions
+                    about our appliance repair services.
+                </p>
+
+            </div>
+
+
+
+            <div class="faq-container">
+
+
+                <!-- FAQ 1 -->
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        What appliances do you repair?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+                    <p>
+                        RepairHub provides services for air
+                        conditioners, refrigerators, washing
+                        machines and other common household
+                        appliances.
+                    </p>
+
+                </details>
+
+
+
+                <!-- FAQ 2 -->
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        Do you provide doorstep service?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+                    <p>
+                        Yes. Our service is designed to provide
+                        convenient appliance repair at your
+                        doorstep.
+                    </p>
+
+                </details>
+
+
+
+                <!-- FAQ 3 -->
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        How can I book a repair?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+                    <p>
+                        Select your appliance, describe the issue
+                        and choose a convenient service time.
+                        Our team will then arrange a technician
+                        visit.
+                    </p>
+
+                </details>
+
+
+
+                <!-- FAQ 4 -->
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        Can I track my service request?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+                    <p>
+                        Yes. Customers can receive updates about
+                        their service request and technician
+                        assignment.
+                    </p>
+
+                </details>
+
+
+
+                <!-- FAQ 5 -->
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        Do you provide maintenance services?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+                    <p>
+                        Yes. Preventive maintenance and general
+                        appliance servicing are also available.
+                    </p>
+
+                </details>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FINAL CTA
+        ====================================================== -->
 
         <section class="cta-section">
 
+
             <div>
 
-                <span>READY TO FIX IT?</span>
+                <span>
+                    READY TO FIX IT?
+                </span>
 
                 <h2>
                     Book a Professional
@@ -592,36 +1555,92 @@
 
             </div>
 
-            <a href="#" class="primary-btn">
+
+            <a href="#"
+               class="primary-btn">
+
                 Book a Repair →
+
             </a>
 
+
         </section>
+
 
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
 
-    <footer>
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+ <footer class="footer">
 
-        <div class="footer-logo">
-            <span>Repair</span>Hub
+        <div class="container footer-grid">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    Repair<span>Hub</span>
+                </a>
+
+                <p>
+                    Reliable home appliance repair services
+                    delivered to your doorstep.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="../index.html">Home  |  </a>
+                <a href="about.html">About  | </a>
+                <a href="service.html">Services | </a>
+                <a href="blog.html">Blog | </a>
+                <a href="contact.html">Contact | </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Services
+                </h4>
+
+                <a href="service.html">AC Repair | </a>
+                <a href="service.html">Refrigerator Repair | </a>
+                <a href="service.html">Washing Machine Repair | </a>
+
+            </div>
+
+
+
         </div>
 
-        <p>
-            Professional appliance repair services
-            at your doorstep.
-        </p>
 
-        <p class="copyright">
-            © 2026 RepairHub. All Rights Reserved.
-        </p>
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 RepairHub. All Rights Reserved.
+            </p>
+
+        </div>
 
     </footer>
 
 
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
     <script src="../js/script.js"></script>
+
 
 </body>
 

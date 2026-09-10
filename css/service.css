@@ -1,5 +1,7 @@
 /* =====================================================
-   SERVICES PAGE
+   REPAIRHUB SERVICES PAGE
+   service.css
+   Header and Footer are not included
 ===================================================== */
 
 
@@ -8,82 +10,224 @@
 ===================================================== */
 
 .services-hero {
+
     position: relative;
+
     min-height: 420px;
+
     padding: 80px 7%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
 
-    background: #f5f8ff;
-background: url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jpg") right / cover no-repeat;
+    background:
+        url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jpg")
+        center / cover no-repeat;
+
     overflow: hidden;
 }
-/* Black shade on top of image */
+
+
+/* Dark overlay */
+
 .services-hero::before {
+
     content: "";
+
     position: absolute;
+
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+
+    background: rgba(0, 0, 0, 0.45);
+
 }
 
-/* Content above black shade */
+
+/* Keep content above overlay */
+
 .services-hero > * {
+
     position: relative;
+
     z-index: 1;
+
 }
+
 
 .services-hero-content {
+
+    width: 100%;
+
     max-width: 800px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
     animation: fadeUp 0.8s ease-out;
+
 }
 
+
+.services-hero .small-heading {
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
 .services-hero h1 {
+
+    color: var(--white);
+
     font-size: clamp(40px, 5vw, 60px);
+
     line-height: 1.1;
 
     margin: 15px 0 20px;
+
 }
+
 
 .services-hero h1 span {
+
+    display: block;
+
     color: var(--primary);
+
 }
 
+
 .services-hero p {
+
     max-width: 650px;
 
     margin: 0 auto;
 
-    /* color: var(--text); */
-color: var(--white);
+    color: var(--white);
+
     font-size: 16px;
+
     line-height: 1.7;
+
 }
 
-.hero-buttons{
-    margin:20px 10px;
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
 }
+
+
+/* =====================================================
+   COMMON SECTION HEADING
+===================================================== */
+
+.service-categories .section-heading,
+.service-coverage .section-heading,
+.common-problems .section-heading,
+.service-benefits .section-heading,
+.service-process .section-heading,
+.service-reviews .section-heading,
+.service-faq .section-heading {
+
+    max-width: 750px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+
+}
+
+
+.service-categories .section-heading span,
+.service-coverage .section-heading span,
+.common-problems .section-heading span,
+.service-benefits .section-heading span,
+.service-process .section-heading span,
+.service-reviews .section-heading span,
+.service-faq .section-heading span {
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.service-categories .section-heading h2,
+.service-coverage .section-heading h2,
+.common-problems .section-heading h2,
+.service-benefits .section-heading h2,
+.service-process .section-heading h2,
+.service-reviews .section-heading h2,
+.service-faq .section-heading h2 {
+
+    margin: 10px 0 12px;
+
+    font-size: clamp(28px, 4vw, 40px);
+
+}
+
+
+.service-categories .section-heading p,
+.service-coverage .section-heading p,
+.common-problems .section-heading p,
+.service-benefits .section-heading p,
+.service-process .section-heading p,
+.service-reviews .section-heading p,
+.service-faq .section-heading p {
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
 
 /* =====================================================
    SERVICE CATEGORIES
 ===================================================== */
 
 .service-categories {
+
     padding: 90px 7%;
+
 }
-/* .service-large-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 25px;
-} */
+
+
 .service-large-card {
+
     display: grid;
 
     grid-template-columns: 180px 1fr auto;
@@ -108,43 +252,64 @@ color: var(--white);
         border-color 0.3s ease;
 
     animation: fadeUp 0.7s ease-out;
+
 }
+
 
 .service-large-card:nth-child(1) {
+
     animation-delay: 0.1s;
+
 }
+
 
 .service-large-card:nth-child(2) {
+
     animation-delay: 0.2s;
+
 }
+
 
 .service-large-card:nth-child(3) {
+
     animation-delay: 0.3s;
+
 }
+
 
 .service-large-card:nth-child(4) {
+
     animation-delay: 0.4s;
+
 }
 
+
 .service-large-card:hover {
+
     transform: translateY(-7px);
 
     border-color: var(--primary);
 
-    box-shadow: 0 15px 40px rgba(23, 105, 255, 0.10);
+    box-shadow:
+        0 15px 40px rgba(23, 105, 255, 0.10);
+
 }
 
 
 /* =====================================================
-   SERVICE ICON
+   SERVICE IMAGE
 ===================================================== */
 
 .service-large-icon {
+
     width: 160px;
+
     height: 160px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     background: #edf4ff;
@@ -154,19 +319,27 @@ color: var(--white);
     overflow: hidden;
 
     transition: transform 0.4s ease;
+
 }
+
 
 .service-large-card:hover .service-large-icon {
+
     transform: scale(1.05);
+
 }
 
+
 .service-large-icon img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 
     display: block;
+
 }
 
 
@@ -174,13 +347,19 @@ color: var(--white);
    SERVICE CARD CONTENT
 ===================================================== */
 
-.service-card-content h2 {
-    margin-bottom: 10px;
+.service-card-content h3 {
+
+    margin: 0 0 10px;
 
     font-size: 25px;
+
 }
 
+
 .service-card-content p {
+
+    max-width: 650px;
+
     margin-bottom: 15px;
 
     color: var(--text);
@@ -188,6 +367,7 @@ color: var(--white);
     font-size: 14px;
 
     line-height: 1.7;
+
 }
 
 
@@ -196,6 +376,7 @@ color: var(--white);
 ===================================================== */
 
 .service-tag {
+
     display: inline-block;
 
     margin-bottom: 12px;
@@ -211,6 +392,7 @@ color: var(--white);
     font-size: 12px;
 
     font-weight: 600;
+
 }
 
 
@@ -219,7 +401,9 @@ color: var(--white);
 ===================================================== */
 
 .service-card-content ul {
+
     margin: 0;
+
     padding: 0;
 
     list-style: none;
@@ -229,29 +413,27 @@ color: var(--white);
     grid-template-columns: repeat(2, 1fr);
 
     gap: 8px 20px;
+
 }
 
-.service-card-content li {
-    position: relative;
 
-    padding-left: 20px;
+.service-card-content li {
 
     color: var(--text);
 
     font-size: 13px;
+
+    line-height: 1.5;
+
 }
 
-.service-card-content li::before {
-    content: "";
 
-    position: absolute;
+.service-card-content li i {
 
-    left: 0;
-    top: 0;
+    margin-right: 7px;
 
     color: var(--primary);
 
-    font-weight: bold;
 }
 
 
@@ -260,13 +442,26 @@ color: var(--white);
 ===================================================== */
 
 .service-link {
+
     display: inline-flex;
 
     align-items: center;
 
+    justify-content: center;
+
     gap: 7px;
 
-    color: var(--primary);
+    margin-top: 15px;
+
+    padding: 10px 20px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    border: 2px solid #edf4ff;
+
+    border-radius: 15px;
 
     font-size: 14px;
 
@@ -275,44 +470,59 @@ color: var(--white);
     text-decoration: none;
 
     white-space: nowrap;
-margin: 10px;
-    transition: gap 0.3s ease;
-    padding: 10px 20px;
-    border:#edf4ff solid 2px;
-    border-radius: 15px;
-    background-color:var(--primary);
-    color:var(--white)
+
+    transition:
+        gap 0.3s ease,
+        transform 0.3s ease,
+        opacity 0.3s ease;
+
 }
 
+
 .service-link:hover {
+
     gap: 12px;
+
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+
 }
 
 
 /* =====================================================
-   SERVICE BENEFITS
+   SERVICE STATISTICS
 ===================================================== */
 
-.service-benefits {
-    padding: 90px 7%;
-background: url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jpg") bottom / cover no-repeat;
-    /* background: #f5f8ff; */
+.service-stats {
+
+    padding: 55px 7%;
+
+    background: #f5f8ff;
+
 }
 
-.service-benefits .section-heading {
-    margin-bottom: 45px;
-}
 
-.benefits-grid {
+.stats-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
-    gap: 25px;
+    gap: 20px;
+
 }
 
-.benefit-card {
-    padding: 30px;
+
+.stat-item {
+
+    padding: 25px 15px;
+
+    text-align: center;
 
     background: var(--white);
 
@@ -324,76 +534,534 @@ background: url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jp
         transform 0.3s ease,
         box-shadow 0.3s ease;
 
-    animation: fadeUp 0.7s ease-out;
 }
 
-.benefit-card:nth-child(1) {
-    animation-delay: 0.1s;
+
+.stat-item:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+
 }
 
-.benefit-card:nth-child(2) {
-    animation-delay: 0.2s;
+
+.stat-item i {
+
+    margin-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 25px;
+
 }
 
-.benefit-card:nth-child(3) {
-    animation-delay: 0.3s;
+
+.stat-item h3 {
+
+    margin: 0 0 5px;
+
+    font-size: 28px;
+
 }
 
-.benefit-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
 
-.benefit-card:hover {
-    transform: translateY(-7px);
+.stat-item p {
 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-}
+    margin: 0;
 
-.benefit-card h3 {
-    margin-bottom: 10px;
-
-    font-size: 19px;
-}
-
-.benefit-card p {
     color: var(--text);
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.6;
 }
 
 
 /* =====================================================
-   BENEFIT ICON
+   COMPLETE APPLIANCE CARE
 ===================================================== */
 
-.benefit-icon {
+.service-coverage {
+
+    padding: 90px 7%;
+
+    background: var(--white);
+
+}
+
+
+.coverage-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.coverage-card {
+
+    padding: 30px 25px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    animation: fadeUp 0.7s ease-out;
+
+}
+
+
+.coverage-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.coverage-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background: #edf4ff;
+
+    color: var(--primary);
+
+    border-radius: 13px;
+
+    font-size: 22px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.coverage-card:hover .coverage-icon {
+
+    transform: scale(1.1) rotate(5deg);
+
+}
+
+
+.coverage-card h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+
+}
+
+
+.coverage-card p {
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   COMMON PROBLEMS
+===================================================== */
+
+.common-problems {
+
+    padding: 90px 7%;
+
+    background: #f5f8ff;
+
+}
+
+
+.problem-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.problem-card {
+
+    padding: 30px 25px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.problem-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.problem-card > i {
+
+    margin-bottom: 20px;
+
+    color: var(--primary);
+
+    font-size: 28px;
+
+}
+
+
+.problem-card h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+
+}
+
+
+.problem-card p {
+
+    margin-bottom: 18px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+.problem-card a {
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.problem-card a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =====================================================
+   SERVICE BENEFITS
+===================================================== */
+
+.service-benefits {
+
+    padding: 90px 7%;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jpg")
+        center / cover no-repeat;
+
+}
+
+
+.service-benefits .section-heading {
+
+    margin-bottom: 45px;
+
+}
+
+
+.service-benefits .section-heading h2,
+.service-benefits .section-heading p {
+
+    color: var(--white);
+
+}
+
+
+.benefits-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.benefit {
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    border-radius: 15px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation: fadeUp 0.7s ease-out;
+
+}
+
+
+.benefit:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.benefit > div {
+
     width: 50px;
+
     height: 50px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     margin-bottom: 18px;
 
     background: #edf4ff;
 
-    border-radius: 12px;
-
     color: var(--primary);
+
+    border-radius: 12px;
 
     font-size: 22px;
 
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease;
 }
 
-.benefit-card:hover .benefit-icon {
-    transform: scale(1.1) rotate(5deg);
+
+.benefit h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 19px;
+
+}
+
+
+.benefit p {
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   WHY CHOOSE REPAIRHUB
+===================================================== */
+
+.why-repairhub {
+
+    padding: 90px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+}
+
+
+.why-content > span {
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.why-content h2 {
+
+    margin: 12px 0 15px;
+
+    font-size: clamp(30px, 4vw, 42px);
+
+    line-height: 1.2;
+
+}
+
+
+.why-content > p {
+
+    max-width: 600px;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+.why-list {
+
+    margin-top: 30px;
+
+    display: grid;
+
+    gap: 22px;
+
+}
+
+
+.why-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+}
+
+
+.why-item > i {
+
+    margin-top: 4px;
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+}
+
+
+.why-item h3 {
+
+    margin-bottom: 5px;
+
+    font-size: 17px;
+
+}
+
+
+.why-item p {
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.why-image {
+
+    height: 450px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+}
+
+
+.why-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.why-image:hover img {
+
+    transform: scale(1.05);
+
 }
 
 
@@ -402,22 +1070,31 @@ background: url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jp
 ===================================================== */
 
 .service-process {
+
     padding: 90px 7%;
+
+    background: #f5f8ff;
+
 }
 
-.service-process .section-heading {
-    margin-bottom: 45px;
-}
 
 .process-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);
 
     gap: 25px;
+
 }
 
+
 .process-card {
+
     position: relative;
 
     padding: 30px 25px;
@@ -435,69 +1112,535 @@ background: url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jp
         box-shadow 0.3s ease;
 
     animation: fadeUp 0.7s ease-out;
+
 }
+
 
 .process-card:nth-child(1) {
+
     animation-delay: 0.1s;
+
 }
+
 
 .process-card:nth-child(2) {
+
     animation-delay: 0.2s;
+
 }
+
 
 .process-card:nth-child(3) {
+
     animation-delay: 0.3s;
+
 }
+
 
 .process-card:nth-child(4) {
+
     animation-delay: 0.4s;
+
 }
+
 
 .process-card:hover {
+
     transform: translateY(-8px);
 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+
 }
 
 
-/* =====================================================
-   PROCESS NUMBER
-===================================================== */
-
 .process-number {
-    width: 45px;
-    height: 45px;
+
+    width: 48px;
+
+    height: 48px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     margin: 0 auto 20px;
 
     background: var(--primary);
 
-    color: white;
+    color: var(--white);
 
     border-radius: 50%;
 
-    font-size: 16px;
+    font-size: 15px;
 
     font-weight: 700;
+
 }
 
+
 .process-card h3 {
+
     margin-bottom: 10px;
 
     font-size: 18px;
+
 }
 
+
 .process-card p {
+
     color: var(--text);
 
     font-size: 13px;
 
     line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   SERVICE GUARANTEE
+===================================================== */
+
+.service-guarantee {
+
+    padding: 70px 7%;
+
+}
+
+
+.guarantee-content {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    display: grid;
+
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+
+    gap: 30px;
+
+    background: #edf4ff;
+
+    border: 1px solid #dbe8ff;
+
+    border-radius: 20px;
+
+}
+
+
+.guarantee-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    border-radius: 50%;
+
+    font-size: 27px;
+
+}
+
+
+.guarantee-content span {
+
+    color: var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.guarantee-content h2 {
+
+    margin: 8px 0;
+
+    font-size: 25px;
+
+}
+
+
+.guarantee-content p {
+
+    max-width: 700px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   CUSTOMER REVIEWS
+===================================================== */
+
+.service-reviews {
+
+    padding: 90px 7%;
+
+    background: #f5f8ff;
+
+}
+
+
+.reviews-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.review-card {
+
+    padding: 30px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.review-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.review-stars {
+
+    margin-bottom: 18px;
+
+    color: #f5b301;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.review-card > p {
+
+    min-height: 100px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+.review-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.user-avatar {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #edf4ff;
+
+    color: var(--primary);
+
+    border-radius: 50%;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.review-user h4 {
+
+    margin-bottom: 3px;
+
+    font-size: 14px;
+
+}
+
+
+.review-user span {
+
+    color: var(--text);
+
+    font-size: 12px;
+
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.service-faq {
+
+    padding: 90px 7%;
+
+}
+
+
+.faq-container {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.faq-item {
+
+    margin-bottom: 15px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.faq-item:hover {
+
+    border-color: var(--primary);
+
+}
+
+
+.faq-item[open] {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 8px 25px rgba(23, 105, 255, 0.08);
+
+}
+
+
+.faq-item summary {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 22px;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+
+.faq-item summary::-webkit-details-marker {
+
+    display: none;
+
+}
+
+
+.faq-item summary i {
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.faq-item[open] summary i {
+
+    transform: rotate(45deg);
+
+}
+
+
+.faq-item p {
+
+    padding: 0 22px 20px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   FINAL CTA
+===================================================== */
+
+.cta-section {
+
+    margin: 0 7% 80px;
+
+    padding: 55px 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.cta-section > div {
+
+    max-width: 700px;
+
+}
+
+
+.cta-section span {
+
+    color: var(--white);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.cta-section h2 {
+
+    margin: 10px 0 12px;
+
+    color: var(--white);
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    line-height: 1.2;
+
+}
+
+
+.cta-section p {
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+/* CTA BUTTON */
+
+.cta-section .primary-btn {
+
+    flex-shrink: 0;
+
+    background: var(--white);
+
+    color: var(--primary);
+
+}
+
+
+.cta-section .primary-btn:hover {
+
+    transform: translateY(-3px);
+
 }
 
 
@@ -505,34 +1648,142 @@ background: url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jp
    DARK MODE
 ===================================================== */
 
-body.dark .services-hero,
-body.dark .service-benefits {
-    background: url("../assets/images/mechanic-uses-screwdriver-tighten-screws-tv.jpg") right / cover no-repeat;
+
+/* Backgrounds */
+
+body.dark .service-stats,
+body.dark .common-problems,
+body.dark .service-process,
+body.dark .service-reviews {
+
+    background: #101722;
+
 }
 
+
+body.dark .service-categories,
+body.dark .service-coverage,
+body.dark .service-faq,
+body.dark .why-repairhub {
+
+    background: #121a27;
+
+}
+
+
+/* Cards */
+
 body.dark .service-large-card,
-body.dark .benefit-card,
-body.dark .process-card {
+body.dark .coverage-card,
+body.dark .problem-card,
+body.dark .process-card,
+body.dark .review-card,
+body.dark .faq-item,
+body.dark .stat-item {
+
     background: #171e2d;
 
     border-color: #30394b;
+
 }
 
-body.dark .service-large-icon,
-body.dark .benefit-icon {
-    background: #202a3d;
+
+/* Text */
+
+body.dark .service-card-content h3,
+body.dark .coverage-card h3,
+body.dark .problem-card h3,
+body.dark .process-card h3,
+body.dark .review-card h4,
+body.dark .stat-item h3,
+body.dark .faq-item summary,
+body.dark .why-content h2,
+body.dark .why-item h3,
+body.dark .guarantee-content h2 {
+
+    color: var(--white);
+
 }
 
-body.dark .services-hero p,
+
 body.dark .service-card-content p,
 body.dark .service-card-content li,
-body.dark .benefit-card p,
-body.dark .process-card p {
+body.dark .coverage-card p,
+body.dark .problem-card p,
+body.dark .process-card p,
+body.dark .review-card > p,
+body.dark .review-user span,
+body.dark .faq-item p,
+body.dark .why-content > p,
+body.dark .why-item p,
+body.dark .stat-item p {
+
     color: #aab4c5;
+
 }
 
-body.dark .service-tag {
+
+/* Icons */
+
+body.dark .service-large-icon,
+body.dark .coverage-icon,
+body.dark .benefit > div,
+body.dark .user-avatar {
+
     background: #202a3d;
+
+}
+
+
+/* Tags */
+
+body.dark .service-tag {
+
+    background: #202a3d;
+
+}
+
+
+/* Guarantee */
+
+body.dark .service-guarantee {
+
+    background: #121a27;
+
+}
+
+
+body.dark .guarantee-content {
+
+    background: #1a2638;
+
+    border-color: #30394b;
+
+}
+
+
+/* Benefits */
+
+body.dark .benefit {
+
+    background: rgba(23, 30, 45, 0.96);
+
+    border-color: #30394b;
+
+}
+
+
+body.dark .benefit h3 {
+
+    color: var(--white);
+
+}
+
+
+body.dark .benefit p {
+
+    color: #aab4c5;
+
 }
 
 
@@ -540,25 +1791,105 @@ body.dark .service-tag {
    TABLET
 ===================================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
+
+
+    /* Statistics */
+
+    .stats-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* Coverage */
+
+    .coverage-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* Problems */
+
+    .problem-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* Process */
+
+    .process-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* Reviews */
+
+    .reviews-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* Service card */
 
     .service-large-card {
+
         grid-template-columns: 150px 1fr;
 
         gap: 25px;
+
     }
+
 
     .service-large-icon {
+
         width: 150px;
+
         height: 150px;
+
     }
+
 
     .service-link {
+
         grid-column: 2;
+
+        justify-self: start;
+
     }
 
-    .process-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    /* Why section */
+
+    .why-repairhub {
+
+        gap: 40px;
+
+    }
+
+
+    .why-image {
+
+        height: 400px;
+
+    }
+
+
+    /* CTA */
+
+    .cta-section {
+
+        padding: 45px;
+
     }
 
 }
@@ -570,26 +1901,84 @@ body.dark .service-tag {
 
 @media (max-width: 700px) {
 
+
+    /* =================================================
+       HERO
+    ================================================= */
+
     .services-hero {
-        min-height: 400px;
+
+        min-height: 430px;
 
         padding: 60px 5%;
+
+        background-position: center;
+
     }
+
 
     .services-hero h1 {
+
         font-size: 40px;
+
     }
+
 
     .services-hero p {
+
         font-size: 14px;
+
     }
 
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+    .hero-buttons a {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    /* =================================================
+       COMMON HEADINGS
+    ================================================= */
+
+    .service-categories .section-heading,
+    .service-coverage .section-heading,
+    .common-problems .section-heading,
+    .service-benefits .section-heading,
+    .service-process .section-heading,
+    .service-reviews .section-heading,
+    .service-faq .section-heading {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    /* =================================================
+       SERVICE CATEGORIES
+    ================================================= */
 
     .service-categories {
+
         padding: 65px 5%;
+
     }
 
+
     .service-large-card {
+
         grid-template-columns: 1fr;
 
         gap: 20px;
@@ -597,43 +1986,356 @@ body.dark .service-tag {
         padding: 22px;
 
         text-align: center;
+
     }
 
+
     .service-large-icon {
+
         width: 130px;
+
         height: 130px;
 
         margin: 0 auto;
+
     }
 
+
     .service-card-content ul {
+
         grid-template-columns: 1fr;
 
         text-align: left;
+
     }
+
 
     .service-link {
+
         grid-column: auto;
 
+        width: 100%;
+
         justify-content: center;
+
     }
 
+
+    /* =================================================
+       STATISTICS
+    ================================================= */
+
+    .service-stats {
+
+        padding: 45px 5%;
+
+    }
+
+
+    .stats-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+
+    .stat-item {
+
+        padding: 20px 10px;
+
+    }
+
+
+    .stat-item h3 {
+
+        font-size: 23px;
+
+    }
+
+
+    /* =================================================
+       COVERAGE
+    ================================================= */
+
+    .service-coverage {
+
+        padding: 65px 5%;
+
+    }
+
+
+    .coverage-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    /* =================================================
+       COMMON PROBLEMS
+    ================================================= */
+
+    .common-problems {
+
+        padding: 65px 5%;
+
+    }
+
+
+    .problem-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    /* =================================================
+       BENEFITS
+    ================================================= */
 
     .service-benefits {
+
         padding: 65px 5%;
+
     }
+
 
     .benefits-grid {
+
         grid-template-columns: 1fr;
+
     }
 
+
+    /* =================================================
+       WHY REPAIRHUB
+    ================================================= */
+
+    .why-repairhub {
+
+        padding: 65px 5%;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .why-image {
+
+        height: 300px;
+
+        order: -1;
+
+    }
+
+
+    /* =================================================
+       PROCESS
+    ================================================= */
 
     .service-process {
+
         padding: 65px 5%;
+
     }
 
+
     .process-grid {
+
         grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    /* =================================================
+       GUARANTEE
+    ================================================= */
+
+    .service-guarantee {
+
+        padding: 50px 5%;
+
+    }
+
+
+    .guarantee-content {
+
+        grid-template-columns: 1fr;
+
+        padding: 30px 25px;
+
+        text-align: center;
+
+        gap: 20px;
+
+    }
+
+
+    .guarantee-icon {
+
+        margin: auto;
+
+    }
+
+
+    .guarantee-content .primary-btn {
+
+        justify-self: center;
+
+    }
+
+
+    /* =================================================
+       REVIEWS
+    ================================================= */
+
+    .service-reviews {
+
+        padding: 65px 5%;
+
+    }
+
+
+    .reviews-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .review-card > p {
+
+        min-height: auto;
+
+    }
+
+
+    /* =================================================
+       FAQ
+    ================================================= */
+
+    .service-faq {
+
+        padding: 65px 5%;
+
+    }
+
+
+    .faq-item summary {
+
+        padding: 18px;
+
+        font-size: 14px;
+
+    }
+
+
+    .faq-item p {
+
+        padding: 0 18px 18px;
+
+        font-size: 13px;
+
+    }
+
+
+    /* =================================================
+       CTA
+    ================================================= */
+
+    .cta-section {
+
+        margin: 0 5% 60px;
+
+        padding: 40px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .cta-section .primary-btn {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+
+    .services-hero h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .services-hero p {
+
+        font-size: 13px;
+
+    }
+
+
+    .stats-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .service-card-content h3 {
+
+        font-size: 21px;
+
+    }
+
+
+    .coverage-card,
+    .problem-card,
+    .benefit,
+    .process-card,
+    .review-card {
+
+        padding: 25px 20px;
+
+    }
+
+
+    .why-content h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .cta-section h2 {
+
+        font-size: 30px;
+
     }
 
 }
@@ -645,20 +2347,32 @@ body.dark .service-tag {
 
 @media (prefers-reduced-motion: reduce) {
 
+
     .services-hero-content,
     .service-large-card,
-    .benefit-card,
+    .coverage-card,
+    .benefit,
     .process-card {
+
         animation: none;
+
     }
+
 
     .service-large-card,
     .service-large-icon,
     .service-link,
-    .benefit-card,
-    .benefit-icon,
-    .process-card {
+    .coverage-card,
+    .coverage-icon,
+    .benefit,
+    .process-card,
+    .problem-card,
+    .why-image img,
+    .review-card,
+    .faq-item {
+
         transition: none;
+
     }
 
 }

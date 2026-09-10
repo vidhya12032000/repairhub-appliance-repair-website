@@ -21,8 +21,10 @@ const themeIcon = document.getElementById("themeIcon");
 
 const savedTheme = localStorage.getItem("theme");
 
-// Safe icon path loader with auto-fallback
+
+// Set theme icon
 function setThemeIcon(iconName) {
+
     if (!themeIcon) return;
 
     const primaryPath = `assets/icons/${iconName}`;
@@ -30,32 +32,53 @@ function setThemeIcon(iconName) {
 
     themeIcon.src = primaryPath;
 
-    // Switch to relative parent directory if path fails to resolve
-    themeIcon.onerror = () => {
+    // Fallback for pages inside /pages folder
+    themeIcon.onerror = function () {
         themeIcon.src = fallbackPath;
-        themeIcon.onerror = null; // Prevent looping if both fail
+        themeIcon.onerror = null;
     };
 }
 
+
 // Apply saved theme when page loads
 if (savedTheme === "dark") {
+
     document.body.classList.add("dark");
-    setThemeIcon("contrast.png");
+
+    // Dark mode → Sun icon
+    setThemeIcon("sun-svgrepo-com.svg");
+
 } else {
-    setThemeIcon("moon.png");
+
+    // Light mode → Moon icon
+    setThemeIcon("moon-svgrepo-com.svg");
 }
 
-// Toggle theme
+
+// Toggle dark / light mode
 if (themeBtn) {
+
     themeBtn.addEventListener("click", function () {
+
         document.body.classList.toggle("dark");
 
-        if (document.body.classList.contains("dark")) {
+        const isDark = document.body.classList.contains("dark");
+
+        if (isDark) {
+
+            // Save dark mode
             localStorage.setItem("theme", "dark");
-            setThemeIcon("contrast.png");
+
+            // Show sun icon
+            setThemeIcon("sun-svgrepo-com.svg");
+
         } else {
+
+            // Save light mode
             localStorage.setItem("theme", "light");
-            setThemeIcon("moon.png");
+
+            // Show moon icon
+            setThemeIcon("moon-svgrepo-com.svg");
         }
     });
 }
@@ -74,46 +97,59 @@ const savedDirection = localStorage.getItem("direction");
 
 // Apply saved direction
 if (savedDirection) {
+
     document.documentElement.dir = savedDirection;
+
+} else {
+
+    // Default direction
+    document.documentElement.dir = "ltr";
 }
 
 
-// Update button text
+// Update RTL button text
 function updateRTLButton() {
 
+    if (!rtlBtn) return;
+
     if (document.documentElement.dir === "rtl") {
+
         rtlBtn.textContent = "LTR";
+
     } else {
+
         rtlBtn.textContent = "RTL";
     }
 }
 
 
-// RTL button click
-rtlBtn.addEventListener("click", () => {
+// RTL / LTR button click
+if (rtlBtn) {
 
-    if (document.documentElement.dir === "rtl") {
+    rtlBtn.addEventListener("click", function () {
 
-        // Change RTL → LTR
-        document.documentElement.dir = "ltr";
+        if (document.documentElement.dir === "rtl") {
 
-        localStorage.setItem("direction", "ltr");
+            // RTL → LTR
+            document.documentElement.dir = "ltr";
 
-    } else {
+            localStorage.setItem("direction", "ltr");
 
-        // Change LTR → RTL
-        document.documentElement.dir = "rtl";
+        } else {
 
-        localStorage.setItem("direction", "rtl");
-    }
+            // LTR → RTL
+            document.documentElement.dir = "rtl";
 
-    updateRTLButton();
-});
+            localStorage.setItem("direction", "rtl");
+        }
+
+        updateRTLButton();
+    });
+}
 
 
 // Initial button state
 updateRTLButton();
-
 
 
 // ======================================
@@ -123,8 +159,11 @@ updateRTLButton();
 const navItems = document.querySelectorAll(".nav-links a");
 
 navItems.forEach(function (item) {
+
     item.addEventListener("click", function () {
+
         if (navLinks) {
+
             navLinks.classList.remove("show");
         }
     });
@@ -138,50 +177,109 @@ navItems.forEach(function (item) {
 const categoryButtons = document.querySelectorAll(".category-btn");
 const blogCards = document.querySelectorAll(".blog-card");
 
-categoryButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
 
-        // Remove active class from all buttons
-        categoryButtons.forEach(function (btn) {
-            btn.classList.remove("active");
-        });
+if (categoryButtons.length > 0 && blogCards.length > 0) {
 
-        // Add active class to clicked button
-        button.classList.add("active");
+    categoryButtons.forEach(function (button) {
 
-        // Get selected category
-        const selectedCategory = button.getAttribute("data-category");
+        button.addEventListener("click", function () {
 
-        // Filter blog cards
-        blogCards.forEach(function (card) {
-            const cardCategory = card.getAttribute("data-category");
+            // Remove active class from all buttons
+            categoryButtons.forEach(function (btn) {
 
-            if (selectedCategory === "all" || selectedCategory === cardCategory) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
+                btn.classList.remove("active");
+
+            });
+
+
+            // Add active class to clicked button
+            button.classList.add("active");
+
+
+            // Get selected category
+            const selectedCategory =
+                button.getAttribute("data-category");
+
+
+            // Filter blog cards
+            blogCards.forEach(function (card) {
+
+                const cardCategory =
+                    card.getAttribute("data-category");
+
+
+                if (
+                    selectedCategory === "all" ||
+                    selectedCategory === cardCategory
+                ) {
+
+                    card.style.display = "block";
+
+                } else {
+
+                    card.style.display = "none";
+                }
+            });
         });
     });
-});
+}
 
 
 // ======================================
-// NEWSLETTER
+// NEWSLETTER FORM
 // ======================================
 
-const newsletterForm = document.getElementById("newsletterForm");
+const newsletterForm =
+    document.getElementById("newsletterForm");
+
 
 if (newsletterForm) {
+
     newsletterForm.addEventListener("submit", function (event) {
+
         event.preventDefault();
 
-        const email = document.getElementById("email").value.trim();
 
-        if (email) {
-            alert("Thank you! You have subscribed to RepairHub.");
-            newsletterForm.reset();
+        const emailInput =
+            document.getElementById("email");
+
+
+        if (!emailInput) return;
+
+
+        const email = emailInput.value.trim();
+
+
+        // Check email
+        if (!email) {
+
+            alert("Please enter your email address.");
+
+            return;
         }
+
+
+        // Basic email validation
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+        if (!emailPattern.test(email)) {
+
+            alert("Please enter a valid email address.");
+
+            return;
+        }
+
+
+        // Success message
+        alert(
+            "Thank you! You have subscribed to RepairHub."
+        );
+
+
+        // Clear form
+        newsletterForm.reset();
     });
 }
 
@@ -190,35 +288,138 @@ if (newsletterForm) {
 // CONTACT FORM
 // ======================================
 
-const contactForm = document.getElementById("contactForm");
+const contactForm =
+    document.getElementById("contactForm");
+
 
 if (contactForm) {
+
     contactForm.addEventListener("submit", function (event) {
+
         event.preventDefault();
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const service = document.getElementById("service").value;
-        const date = document.getElementById("date").value;
-        const time = document.getElementById("time").value;
-        const message = document.getElementById("message").value.trim();
+
+        // Get form fields
+        const nameInput =
+            document.getElementById("name");
+
+        const emailInput =
+            document.getElementById("email");
+
+        const phoneInput =
+            document.getElementById("phone");
+
+        const serviceInput =
+            document.getElementById("service");
+
+        const dateInput =
+            document.getElementById("date");
+
+        const timeInput =
+            document.getElementById("time");
+
+        const messageInput =
+            document.getElementById("message");
+
+
+        // Make sure all elements exist
+        if (
+            !nameInput ||
+            !emailInput ||
+            !phoneInput ||
+            !serviceInput ||
+            !dateInput ||
+            !timeInput ||
+            !messageInput
+        ) {
+
+            return;
+        }
+
+
+        // Get values
+        const name =
+            nameInput.value.trim();
+
+        const email =
+            emailInput.value.trim();
+
+        const phone =
+            phoneInput.value.trim();
+
+        const service =
+            serviceInput.value;
+
+        const date =
+            dateInput.value;
+
+        const time =
+            timeInput.value;
+
+        const message =
+            messageInput.value.trim();
+
+
+        // ==================================
+        // VALIDATION
+        // ==================================
+
 
         // Check empty fields
-        if (!name || !email || !phone || !service || !date || !time || !message) {
+        if (
+            !name ||
+            !email ||
+            !phone ||
+            !service ||
+            !date ||
+            !time ||
+            !message
+        ) {
+
             alert("Please fill in all the fields.");
+
             return;
         }
 
-        // Check phone number
-        if (phone.length < 10) {
-            alert("Please enter a valid phone number.");
+
+        // Email validation
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+        if (!emailPattern.test(email)) {
+
+            alert("Please enter a valid email address.");
+
             return;
         }
 
-        // Success message
-        alert("Thank you, " + name + "! Your message has been submitted successfully.");
 
+        // Phone validation
+        const phonePattern =
+            /^[0-9]{10}$/;
+
+
+        if (!phonePattern.test(phone)) {
+
+            alert("Please enter a valid 10-digit phone number.");
+
+            return;
+        }
+
+
+        // ==================================
+        // SUCCESS
+        // ==================================
+
+        alert(
+            "Thank you, " +
+            name +
+            "! Your message has been submitted successfully."
+        );
+
+
+        // Reset form
         contactForm.reset();
     });
 }
